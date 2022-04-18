@@ -13,4 +13,4 @@ function keepTheLast(arr, num) {
   return arr;
 }
 
-console.log(keepTheLast(numArr, 3));
+console.log(keepTheLast(numArr, 4));
