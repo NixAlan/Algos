@@ -11,12 +11,12 @@ function letterGrade(num) {
     }
   } else if (num > 79 && num < 90) {
     switch (num) {
-      case (num = 80):
-      case (num = 81):
+      case 80:
+      case 81:
         console.log(`Score: ${num}. Grade: B-`);
         break;
-      case (num = 88):
-      case (num = 89):
+      case 88:
+      case 89:
         console.log(`Score: ${num}. Grade: B+`);
         break;
       default:
@@ -24,12 +24,12 @@ function letterGrade(num) {
     }
   } else if (num > 69 && num < 80) {
     switch (num) {
-      case (num = 70):
-      case (num = 71):
+      case 70:
+      case 71:
         console.log(`Score: ${num}. Grade: C-`);
         break;
-      case (num = 78):
-      case (num = 79):
+      case 78:
+      case 79:
         console.log(`Score: ${num}. Grade: C+`);
         break;
       default:
@@ -37,12 +37,12 @@ function letterGrade(num) {
     }
   } else if (num > 59 && num < 70) {
     switch (num) {
-      case (num = 60):
-      case (num = 61):
+      case 60:
+      case 61:
         console.log(`Score: ${num}. Grade: D-`);
         break;
-      case (num = 68):
-      case (num = 69):
+      case 68:
+      case 69:
         console.log(`Score: ${num}. Grade: D+`);
         break;
       default:
@@ -53,21 +53,8 @@ function letterGrade(num) {
   }
 }
 
-letterGrade(78);
-
-// function accurateGrade(num) {
-//   console.log("devlog", num);
-//   switch (num) {
-//     case (num = 91):
-//     case (num = 92):
-//       console.log(`Score: ${num}. Grade: A-`);
-//       break;
-//     case {num > 9}3:
-//       console.log(`Score: ${num}. Grade: A`);
-//       break;
-//     default:
-//       console.log(`Score: ${num}. Grade: B`);
-//   }
-// }
-
-// accurateGrade(99);
+letterGrade(50);
+letterGrade(51);
+letterGrade(55);
+letterGrade(58);
+letterGrade(59);
