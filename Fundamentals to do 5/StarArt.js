@@ -45,6 +45,6 @@ function centerStars(num) {
   console.log("Star Center is", starCenter.length, "characters long");
 }
 
-centerStars(5);
+centerStars(6);
 
 console.log(drawRightStars(5));
