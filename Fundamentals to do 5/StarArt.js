@@ -31,4 +31,20 @@ function drawRightStars(num) {
   return lineStarsRight;
 }
 
+function centerStars(num) {
+  var starCenter = "";
+  var startStars = (75 - num) / 2;
+  for (let i = 0; i < 75; i++) {
+    if (i > startStars && i <= startStars + num) {
+      starCenter = starCenter + "*";
+    } else {
+      starCenter = starCenter + " ";
+    }
+  }
+  console.log(starCenter);
+  console.log("Star Center is", starCenter.length, "characters long");
+}
+
+centerStars(5);
+
 console.log(drawRightStars(5));
