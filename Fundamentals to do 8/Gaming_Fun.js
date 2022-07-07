@@ -55,6 +55,106 @@ function playStatistics() {
   console.log(`The High is ${high}, The Low is ${low}`);
 }
 
-playStatistics();
+//playStatistics();
+
+function playStatisticsSum() {
+  var high = rollOne();
+  console.log(high);
+  var low = rollOne();
+  console.log(low);
+  var sum = high + low;
+  if (high < low) {
+    var tempLow = high;
+    high = low;
+    low = tempLow;
+  }
+  for (let i = 0; i < 6; i++) {
+    var tempRoll = rollOne();
+    sum = sum + tempRoll;
+    console.log(`the roll is ${tempRoll}`);
+    if (tempRoll > high) {
+      high = tempRoll;
+    } else {
+      if (tempRoll < low || tempRoll === 0) low = tempRoll;
+    }
+  }
+  console.log(
+    `The High is ${high}, The Low is ${low}, The sum of the Rolls is ${sum}`
+  );
+}
+
+//playStatisticsSum();
+
+function playStatisticsNum(num) {
+  if (num < 2) {
+    console.log("Num must be greater than 2");
+  } else {
+    var high = rollOne();
+    console.log(high);
+    var low = rollOne();
+    console.log(low);
+    var sum = high + low;
+    if (high < low) {
+      // switch hign and low if High is less than low
+      var tempLow = high;
+      high = low;
+      low = tempLow;
+    }
+    if (num >= 3) {
+      for (let i = 0; i < num - 2; i++) {
+        var tempRoll = rollOne();
+        sum = sum + tempRoll;
+        console.log(`the roll is ${tempRoll}`);
+        if (tempRoll > high) {
+          high = tempRoll;
+        } else {
+          if (tempRoll < low || tempRoll === 0) low = tempRoll;
+        }
+      }
+    }
+  }
+  console.log(
+    `The High is ${high}, The Low is ${low}, The sum of the Rolls is ${sum}`
+  );
+}
+
+//playStatisticsNum(4);
+
+function playStatisticsAve(num) {
+  if (num < 2) {
+    console.log("Num must be greater than 2");
+  } else {
+    var high = rollOne();
+    console.log(high);
+    var low = rollOne();
+    console.log(low);
+    var sum = high + low;
+    if (high < low) {
+      // switch hign and low if High is less than low
+      var tempLow = high;
+      high = low;
+      low = tempLow;
+    }
+    if (num >= 3) {
+      for (let i = 0; i < num - 2; i++) {
+        var tempRoll = rollOne();
+        sum = sum + tempRoll;
+        console.log(`the roll is ${tempRoll}`);
+        if (tempRoll > high) {
+          high = tempRoll;
+        } else {
+          if (tempRoll < low || tempRoll === 0) low = tempRoll;
+        }
+      }
+    }
+  }
+  console.log(
+    `The High is ${high}, The Low is ${low}, The average of the Rolls is ${
+      sum / num
+    }`
+  );
+}
+
+playStatisticsAve(4);
 
 console.log(rollOne());
