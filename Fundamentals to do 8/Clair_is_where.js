@@ -27,10 +27,10 @@ class location {
     return this.ylocation;
   }
   distFromHome() {
-    if (Math.abs(this.xlocation) > Math.abl(this.ylocation)) {
-      return Math.abs(this.xlocation);
+    if (Math.abs(this.xlocation) > Math.abs(this.ylocation)) {
+      return `Clair is ${Math.abs(this.xlocation)} from home`;
     } else {
-      return Math.abs(this.ylocation);
+      return `Clair is ${Math.abs(this.ylocation)} from home`;
     }
   }
 }
@@ -38,7 +38,9 @@ class location {
 let claireLocation = new location(0, 0);
 claireLocation.move(1, -2);
 claireLocation.move(3, 1);
+claireLocation.move(10, 10);
 console.log("clairs xlocation is " + claireLocation.xlocation);
 console.log("clairs ylocation is " + claireLocation.ylocation);
+console.log(claireLocation.distFromHome());
 claireLocation.reset();
 console.log(claireLocation.xlocation, claireLocation.ylocation);
