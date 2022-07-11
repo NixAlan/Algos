@@ -24,6 +24,7 @@ function weekdayName2(weekdayNum) {
     switch (weekday) {
       case 1:
         day = "Sunday";
+        return 1;
         break;
       case 2:
         day = "Monday";
@@ -47,15 +48,74 @@ function weekdayName2(weekdayNum) {
         day = "enter number between 1 and 7";
     }
     console.log(day);
+    return day;
   }
 }
 
-weekdayName2(366);
-weekdayName2(8);
-weekdayName2(15);
-weekdayName2(9);
-weekdayName2(16);
-weekdayName2(10);
-weekdayName2(17);
-weekdayName2(11);
-weekdayName2(18);
+//weekdayName2(366);
+//weekdayName2(8);
+//weekdayName2(15);
+//weekdayName2(9);
+//weekdayName2(16);
+//weekdayName2(10);
+//weekdayName2(17);
+//weekdayName2(11);
+//weekdayName2(18);
+
+function someDays() {
+  for (let i = 0; i < 17; i++) {
+    day = weekdayName2(Math.floor(Math.random() * 366));
+    if (
+      day === "Monday" ||
+      day === "Tuesday" ||
+      day == "Wednesday" ||
+      day === "Thursday" ||
+      day === "Friday"
+    ) {
+      var phrase = "work hard";
+      console.log(phrase);
+    } else {
+      phrase = "Enjoy your day off!";
+      console.log(phrase);
+    }
+  }
+}
+
+someDays();
+
+function monthName(monthNum) {
+  var months = [
+    "January",
+    "February",
+    "March",
+    "April",
+    "May",
+    "June",
+    "July",
+    "August",
+    "September",
+    "October",
+    "November",
+    "December",
+  ];
+
+  if (monthNum > 12 || monthNum < 1) {
+    console.log("input number between 1 and 12");
+  } else {
+    console.log(months[monthNum - 1]);
+    return months[monthNum - 1];
+  }
+}
+
+monthName(0);
+monthName(13);
+monthName(3);
+monthName(4);
+monthName(5);
+monthName(6);
+monthName(7);
+monthName(8);
+monthName(9);
+monthName(10);
+monthName(11);
+monthName(12);
